@@ -18,6 +18,10 @@ class TestStatistics(unittest.TestCase):
         self.players = PlayerReaderStub.get_players(self)
 
     
+
+
+
+    
     
     """  
     def test_konstruktori_luo_oikein(self):
