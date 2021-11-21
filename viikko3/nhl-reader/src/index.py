@@ -13,13 +13,18 @@ def main():
     for player_dict in response:
         if player_dict['nationality']=="FIN":
             player = Player(
-                player_dict['name']
+                player_dict['name'],
+                player_dict['goals'],
+                player_dict['assists']
             )
             players.append(player)
-
+    
+    def player_sort(player):
+        return player.sum    
+    sorted_players = sorted(players,key=player_sort, reverse=True)
+    
     print("Oliot:")
-
-    for player in players:
+    for player in sorted_players:
         print(player)
         
 if __name__ == "__main__":
