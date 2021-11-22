@@ -6,8 +6,8 @@ Test Setup  Create User And Go To Login Page
 
 *** Test Cases ***
 Login With Correct Credentials
-    Set Username  kalle
-    Set Password  kalle123
+    Set Username  kalle   
+    Set Password  kalle12345
     Submit Credentials
     Login Should Succeed
 
@@ -44,6 +44,6 @@ Set Password
     Input Password  password  ${password}
 
 Create User And Go To Login Page
-    Create User  kalle  kalle123
+    Create User  kalle  kalle12345
     Go To Login Page
     Login Page Should Be Open

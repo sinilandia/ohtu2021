@@ -14,5 +14,3 @@ Click Register Link
     Register Page Should Be Open
 
 *** Keywords ***
-Register Page Should Be Open
-    Title Should Be  Register
