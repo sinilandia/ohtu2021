@@ -24,3 +24,9 @@ Main Page Should Be Open
 
 Go To Login Page
     Go To  ${LOGIN URL}
+
+Go To Home Page
+    Go To  ${HOME URL}
+
+Home Page Should Be Open
+    Title Should Be  Ohtu Application
