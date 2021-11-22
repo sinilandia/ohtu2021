@@ -23,6 +23,25 @@ Login With Nonexistent Username
     Submit Credentials
     Login Should Fail With Message  Invalid username or password
 
+Login After Successful Registration
+    Create User  kallekalle  kalle12345
+    Go To Login Page
+    Login Page Should Be Open
+    Set Username  kallekalle
+    Set Password  kalle12345
+    Submit Credentials
+    Login Should Succeed
+
+Login After Failed Registration
+    Create User  kal  kalle12345
+    Go To Login Page
+    Login Page Should Be Open
+    Set Username  kal
+    Set Password  kalle12345
+    Submit Credentials
+    Login Should Fail With Message  Invalid username or password
+
+
 *** Keywords ***
 Login Should Succeed
     Main Page Should Be Open
