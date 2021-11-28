@@ -12,8 +12,14 @@ class Ostoskori:
         return len(self.oliot)
 
     def hinta(self):
-        return 0
         # kertoo korissa olevien ostosten yhteenlasketun hinnan
+        summa = 0
+        lkm = self.tavaroita_korissa()
+        i = 0
+        while i < lkm:
+            summa += self.oliot[i].hinta()
+            i+=1
+        return summa
 
     def lisaa_tuote(self, lisattava: Tuote):
         # lisää tuotteen
