@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "tennis"
+name = "tdd-ostoskori"
 version = "0.1.0"
 description = ""
-authors = ["Kalle Ilves <kalle.ilves@helsinki.fi>"]
+authors = ["Matti Luukkainen <mluukkai@iki.fi>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
