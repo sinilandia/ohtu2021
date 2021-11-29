@@ -15,8 +15,12 @@ def main():
     print("LKM: " + str(kori.oliot[1].lukumaara()))
 
     kori.poista_tuote(maito)
+    kori.poista_tuote(maito)
     print("POISTETAAN Kori: " + kori.oliot[0].tuotteen_nimi() + "  ")
     print("POISTETAAN LKM: " + str(kori.oliot[0].lukumaara()))
+    print("olioiden lkm: " + str(len(kori.ostokset())))
+
+
 
 if __name__ == "__main__":
     main()

@@ -42,6 +42,8 @@ class Ostoskori:
         while i < len(self.oliot):
             if self.oliot[i].tuotteen_nimi() == poistettava.nimi():
                 self.oliot[i].muuta_lukumaaraa(-1)
+                if self.oliot[i].lukumaara() == 0:
+                    del self.oliot[i]
                 return
             i += 1
 
