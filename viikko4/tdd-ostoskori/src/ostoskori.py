@@ -48,8 +48,8 @@ class Ostoskori:
             i += 1
 
     def tyhjenna(self):
-        pass
         # tyhjentää ostoskorin
+        self.oliot.clear()
 
     def ostokset(self):
         # palauttaa listan jossa on korissa olevat ostos-oliot
