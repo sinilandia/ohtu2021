@@ -16,23 +16,28 @@ def main():
     for player in stats.matches(matcher):
         print(player)
     
-    matcher = And(
-        Not(HasAtLeast(1, "goals")),
-        PlaysIn("NYR")
+    matcher = Or(
+        HasAtLeast(30, "goals"),
+        HasAtLeast(50, "assists")
     )
 
     for player in stats.matches(matcher):
         print(player)
-    
-    print("\nHAS FEWER THAN \n")
+
+    print("\n AND OR \n")
 
     matcher = And(
-        HasFewerThan(1, "goals"),
-        PlaysIn("NYR")
+        HasAtLeast(40, "points"),
+        Or(
+            PlaysIn("NYR"),
+            PlaysIn("NYI"),
+            PlaysIn("BOS")
+        )
     )
-
     for player in stats.matches(matcher):
         print(player)
+
+
 
 
 if __name__ == "__main__":
