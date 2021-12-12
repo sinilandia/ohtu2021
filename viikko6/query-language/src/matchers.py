@@ -49,8 +49,7 @@ class HasFewerThan:
         return player_value < self._value
 
 class Or:
-    def __init__(self, query, *matchers):
-        self.query = query
+    def __init__(self, *matchers):
         self._matchers = matchers
     
     def matches(self, player):
@@ -82,3 +81,6 @@ class QueryBuilder:
     
     def hasFewerThan(self, value, attr):
         return QueryBuilder(And(self.query_object, HasFewerThan(value, attr)))
+    
+    def oneOf(self, *queries):
+        return QueryBuilder(Or(*queries))
